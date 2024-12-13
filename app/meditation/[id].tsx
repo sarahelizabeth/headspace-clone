@@ -4,6 +4,10 @@ import { Stack, useLocalSearchParams } from 'expo-router';
 import { FontAwesome6, MaterialCommunityIcons, MaterialIcons } from '@expo/vector-icons';
 import { useState } from 'react';
 import Slider from '@react-native-community/slider';
+import { useAudioPlayer } from 'expo-audio';
+
+import audio from '@/assets/audio/audio1.mp3';
+
 const MeditationDetail = () => {
   const { id } = useLocalSearchParams<{ id: string }>();
   const meditation = meditations.find((meditation) => meditation.id === Number(id));
